@@ -1,4 +1,4 @@
-Example to-do list application using Form.io
+Example GPS Tracking application using Form.io
 ---------------------------------
 This is an example project that integrates into Form.io.
 
