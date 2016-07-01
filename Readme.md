@@ -11,7 +11,7 @@ If you have not yet created a project on Form.io, you can easily create one and 
 
 ```
 npm install -g formio-cli
-formio bootstrap formio/formio-app-todo
+formio bootstrap formio/formio-app-gpstracker
 ```
 
 This will create a project for you on Form.io as well as configure this application to use your sandboxed project. Feel free to fork and modify as you like.
