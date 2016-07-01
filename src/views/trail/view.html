@@ -1,0 +1,5 @@
+<h3>{{ currentResource.resource.data.title }}</h3>
+<p>{{ currentResource.resource.data.description }}</p>
+<map zoom="15" center="[{{ currentResource.resource.data.points[0].lat }}, {{ currentResource.resource.data.points[0].lng }}]">
+  <marker ng-repeat="point in currentResource.resource.data.points track by $index" position="[{{ point.lat }}, {{ point.lng }}]" visible="true"></marker>
+</map>

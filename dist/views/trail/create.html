@@ -1,0 +1,18 @@
+<h3 ng-if="pageTitle">{{ pageTitle }}</h3>
+<hr ng-if="pageTitle"></hr>
+<div class="row">
+  <div class="col col-sm-7">
+    <div class="well">
+      <button class="btn btn-sm btn-success btn-lg" ng-if="recording" ng-click="setRecording(false)"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Recording...</button>
+      <button class="btn btn-sm btn-danger btn-lg" ng-if="!recording" ng-click="setRecording(true)"><span class="glyphicon glyphicon-record" aria-hidden="true"></span> Record Trail</button>
+      <span><strong>{{ submission.data.points.length }}</strong> points recorded</span>
+    </div>
+    <div ng-if="!submission.data.points.length" class="alert alert-info"><span class="glyphicon glyphicon-refresh glyphicon-spin"></span> <strong>Waiting for GPS</strong></div>
+    <map ng-if="submission.data.points.length" zoom="15" center="[{{ submission.data.points[0].lat }}, {{ submission.data.points[0].lng }}]">
+      <marker ng-repeat="point in submission.data.points track by $index" position="[{{ point.lat }}, {{ point.lng }}]" visible="true"></marker>
+    </map>
+  </div>
+  <div class="col col-sm-5">
+    <formio src="currentResource.formUrl" submission="submission" hide-components="hideComponents"></formio>
+  </div>
+</div>
