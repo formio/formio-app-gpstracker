@@ -7,15 +7,18 @@
       '$rootScope',
       'AppConfig',
       'FormioAuth',
+      'FormioOffline',
       '$state',
       function(
         $rootScope,
         AppConfig,
         FormioAuth,
+        FormioOffline,
         $state
       ) {
         // Initialize the authentication for form.io.
         FormioAuth.init();
+        FormioOffline.init();
 
         $rootScope.$on('formio.unauthorized', function() {
           $rootScope.setUser(null, null);

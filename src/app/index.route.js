@@ -11,6 +11,7 @@
     $urlRouterProvider,
     FormioResourceProvider,
     FormioAuthProvider,
+    FormioOfflineProvider,
     FormioProvider,
     AppConfig
   ) {
@@ -18,8 +19,12 @@
     // Set the base url for formio.
     FormioProvider.setBaseUrl(AppConfig.apiUrl);
     FormioProvider.setAppUrl(AppConfig.appUrl);
-    FormioAuthProvider.register('login', 'user');
-    FormioAuthProvider.register('register', 'user');
+    FormioOfflineProvider.register({
+      errorUrl: '/error',
+      homeState: 'home'
+    });
+    FormioAuthProvider.register('login', 'user', AppConfig.forms.userLoginForm);
+    FormioAuthProvider.register('register', 'user', AppConfig.forms.userRegisterForm);
     $stateProvider
       .state('home', {
         url: '/',

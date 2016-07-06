@@ -99,8 +99,20 @@ gulp.task('views', function() {
   ]).pipe(gulp.dest(path.join(conf.paths.dist, '/views/')));
 });
 
+gulp.task('offline', ['html', 'config', 'fonts', 'other'], function() {
+  return gulp.src([path.join(conf.paths.dist, '/**/*')], { base: './dist/' })
+    .pipe($.manifest({
+      hash: true,
+      preferOnline: true,
+      network: ['*'],
+      filename: 'app.manifest',
+      exclude: ['app.manifest', 'maps/**']
+    }))
+    .pipe(gulp.dest(conf.paths.dist));
+});
+
 gulp.task('clean', function (done) {
   $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')], done);
 });
 
-gulp.task('build', ['html', 'fonts', 'other', 'views', 'config']);
+gulp.task('build', ['html', 'fonts', 'other', 'views', 'config', 'offline']);

@@ -18,6 +18,18 @@ body {
   padding-bottom: 15px;
 }
 
+#content {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  min-height: 200px;
+  padding: 20px;
+  background-color: #eee;
+  color: #999;
+}
+
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

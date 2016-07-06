@@ -12,6 +12,7 @@ var apiUrl = query.apiUrl || API_URL;
 angular.module('formioAppTodo').constant('AppConfig', {
   appUrl: appUrl,
   apiUrl: apiUrl,
+  appVersion: "1.0.0",
   forms: {
     userForm: appUrl + '/user',
     userLoginForm: appUrl + '/user/login',
