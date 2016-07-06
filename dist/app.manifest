@@ -6,13 +6,14 @@ config.template.js
 favicon.ico
 index.html
 project.json
+styles/app-349a5ae1b4.css
+styles/vendor-58a836f0ac.css
 scripts/app-be83bc38f9.js
 scripts/app-f8f69d4ba1.js
 scripts/vendor-722e19f579.js
 scripts/vendor-79f69976cc.js
 scripts/vendor-970866ff9c.js
-styles/app-349a5ae1b4.css
-styles/vendor-58a836f0ac.css
+scripts/vendor-dbdb67e5c3.js
 views/main.html
 views/pager.html
 assets/images/angular.png
@@ -44,4 +45,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 8dcd65dc1b3667a4ece4b20bec148b79de2ec645bbf0f543447dc7cd4e3272b2
+# hash: f36f54f61b624e04a9517611626091a3bc9c59ccddf502ab3dc31e29d34b03d2
