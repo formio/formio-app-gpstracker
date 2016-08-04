@@ -23,8 +23,9 @@
       errorUrl: '/error',
       homeState: 'home'
     });
-    FormioAuthProvider.register('login', 'user', AppConfig.forms.userLoginForm);
-    FormioAuthProvider.register('register', 'user', AppConfig.forms.userRegisterForm);
+    FormioAuthProvider.register('login', 'user', 'user', AppConfig.forms.userLoginForm, false);
+    FormioAuthProvider.register('register', 'user', 'user', AppConfig.forms.userRegisterForm, false);
+    FormioAuthProvider.setForceAuth(true);
     $stateProvider
       .state('home', {
         url: '/',

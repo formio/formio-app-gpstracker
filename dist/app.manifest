@@ -6,16 +6,19 @@ config.template.js
 favicon.ico
 index.html
 project.json
-styles/app-349a5ae1b4.css
-styles/vendor-58a836f0ac.css
 scripts/app-be83bc38f9.js
+scripts/app-e368f87803.js
 scripts/app-f8f69d4ba1.js
 scripts/vendor-722e19f579.js
 scripts/vendor-79f69976cc.js
 scripts/vendor-970866ff9c.js
+scripts/vendor-d6e8cd7ed3.js
 scripts/vendor-dbdb67e5c3.js
 views/main.html
 views/pager.html
+styles/app-349a5ae1b4.css
+styles/vendor-58a836f0ac.css
+styles/vendor-7ed1572106.css
 assets/images/angular.png
 assets/images/bootstrap.png
 assets/images/browsersync.png
@@ -45,4 +48,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: f36f54f61b624e04a9517611626091a3bc9c59ccddf502ab3dc31e29d34b03d2
+# hash: c4d67a1668ee58f82c74d15e87df66fa99558bc5b2b6ee41562f9d6b10598c0d
